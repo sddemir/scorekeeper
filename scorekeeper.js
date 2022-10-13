@@ -16,8 +16,10 @@ btn1.addEventListener('click', ()=>{
         scoreOf1 += 1;
     if (scoreOf1 == winningScore){
         isGameOver= true;
-    score1.classList.add('winner');
-    score2.classList.add('loser');}
+    score1.classList.add('has-text-success');
+    score2.classList.add('has-text-danger');
+    btn1.disabled = true;
+    btn2.disabled = true;}
     score1.textContent = scoreOf1;}
 })
 
@@ -26,8 +28,10 @@ btn2.addEventListener('click', ()=>{
         scoreOf2 += 1;
     if (scoreOf2 == winningScore){
         isGameOver= true;
-        score2.classList.add('winner');
-        score1.classList.add('loser');}
+        score2.classList.add('has-text-success');
+        score1.classList.add('has-text-danger');
+        btn1.disabled = true;
+        btn2.disabled = true;}
     score2.textContent = scoreOf2;}
 })
 
@@ -43,6 +47,8 @@ function resett () {
     scoreOf2 = 0;
     score1.textContent= 0;
     score2.textContent= 0;
-    score1.classList.remove('winner', 'loser');
-    score2.classList.remove('winner', 'loser');
+    score1.classList.remove('has-text-success', 'has-text-danger');
+    score2.classList.remove('has-text-success', 'has-text-danger');
+    btn1.disabled = false;
+    btn2.disabled = false;
 }
