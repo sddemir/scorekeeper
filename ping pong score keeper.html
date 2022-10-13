@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Score Keeper</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <style>
             .winner{
                 color:green;
@@ -16,7 +17,37 @@
 
     </head>
     <body>
-       <h1 id="h1"><span id="p1score">0 </span> to <span id="p2score">0 </span></h1>
+       <div class="container">
+        <div class="columns">
+            <div class="column is-half is-two-fifths is-offset-one-quarter ">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Ping Pong Score Keeper
+                      </p>
+                      <button class="card-header-icon" aria-label="more options">
+                        <span class="icon">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <h1 class="title is-1" id="h1"><span id="p1score">0 </span> to <span id="p2score">0 </span></h1>
+                        <p class="subtitle">Use the buttons below to keep score</p>
+                      </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="is-primary button card-footer-item" id="p1button">+1 Player One</button>
+                        <button class="is-info button card-footer-item" id="p2button">+1 Player Two</button>
+                        <button class="is-danger button card-footer-item" id="reset">Reset</button>
+                    </footer>
+                  </div>
+            </div>
+        </div>
+       </div>
+
+       
        <label for="numbers">Playing to</label>
        <select name="numbers" id="numbers">
         <option value="5">5</option>
@@ -26,9 +57,7 @@
         <option value="9">9</option>
         <option value="10">10</option>
        </select>
-       <button id="p1button">+1 Player One</button>
-       <button id="p2button">+1 Player Two</button>
-       <button id="reset">Reset</button>
+       
 
 
        <script src="scorekeeper.js"></script>
